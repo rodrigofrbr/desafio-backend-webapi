@@ -20,6 +20,15 @@ Desta forma, conversando com o time descobrimos que você será o responsável p
 **O que não fazer:**
 Vamos manter o desafio simples, ou seja, não crie tarefas diferentes para cada usuário ou coisas do gênero. A ideia é saber se você consegue criar uma API seguindo boas práticas e que faça persistência no banco de dados.
 
+## O que seria uma tarefa:
+Toda tarefa possui:
+
+- Id (identificador único da tarefa);
+- Titulo
+- Descrição
+- Data de Criação 
+- Data de Atualização 
+
 ## Requisitos técnicos (para vaga de C#):
 - Utilizar a base de dados mysql;
 - Você pode utilizar o .NET Framework. Entranto, seria um diferencial construir a API com dotnet core 3.1.
