@@ -26,6 +26,10 @@ Vamos manter o desafio simples, ou seja, não crie tarefas diferentes para cada 
 - Utilizar o Entity Framework para a camada de persistência;
 - Adotar as melhores práticas do mercado para construção de APIs;
 
+# Diferenciais:
+- Instalar e configurar o swagger;
+- Aplicar o padrão REST para o desenvolvimento da API;
+
 # O que será avaliado:
 - **Organização do código**: Como você organiza os arquivos que compõem a solução;
 - **Estruturação do código**: Como você estrutura o código e a solução do projeto (arquitetura adotada, etc);
