@@ -4,30 +4,29 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p class="mt-4">
     @using (Html.BeginForm("Index", "Tarefas", FormMethod.Get))
     {
-        <input type="text" name="search" placeholder="Buscar Tarefa..." />
-        <input type="submit" name="submit" value="Search" />
+        <input class="form-control" type="text" name="search" placeholder="Título" />
+        <input class="btn btn-outline-dark btn-block mt-2" type="submit" name="submit" value="Procurar" />
     }
+    <a class="btn btn-outline-dark btn-lg btn-block mt-4" asp-action="Create">Criar Nova Tarefa</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Titulo)
+                Título
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Descricao)
+                Descrição
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataCriar)
+                Criado
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataUpdate)
+                Última Atualização
             </th>
             <th></th>
         </tr>
@@ -48,9 +47,9 @@
                 @Html.DisplayFor(modelItem => item.DataUpdate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn btn-outline-dark" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                <a class="btn btn-outline-dark" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                <a class="btn btn-outline-dark" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
             </td>
         </tr>
 }
