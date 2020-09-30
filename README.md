@@ -1,50 +1,21 @@
-# Inforce: Desafio Backend Developer
-Este documento descreve o desafio que será utilizado para avaliar os candidatos à vaga de backend na Inforce. Caso você tenha chegado aqui por acaso, sinta-se à vontade em realizar o teste, e logo após, contar um pouco mais sobre você através do formulário de RH do nosso site (http://inforce.com.br/rh).
-
-## O desafio:
-A equipe de produtos da Inforce descobriu que uma das solicitações mais recorrentes dos nossos clientes, a construção de um ferramenta de tarefas, onde o cliente acessará um link e informará as tarefas à serem feitas. A medida que a pessoa for realizando a tarefa, a mesma irá excluir a tarefa para tirar da lista e dar sequência para as próximas.
-
-Desta forma, conversando com o time descobrimos que você será o responsável por criar criar a API que faça um CRUD das tarefas, ou seja:
-
-- Crie um projeto webapi; 
-
-- Crie uma base de dados com os dados informados abaixo;
-
-- Faça um CRUD de tarefas. Será necessário gerar 5 endpoints para atender à esta finalidade, à saber:
-  - Listar todas as tarefas
-  - Buscar uma tarefa em especifico;
-  - Criar uma tarefa nova;
-  - Excluir uma tarefa;
-  - Editar uma tarefa;
-
-**O que não fazer:**
-Vamos manter o desafio simples, ou seja, não crie tarefas diferentes para cada usuário ou coisas do gênero. A ideia é saber se você consegue criar uma API seguindo boas práticas e que faça persistência no banco de dados.
-
-## O que seria uma tarefa:
-Toda tarefa possui:
-
-- Id (identificador único da tarefa);
-- Titulo
-- Descrição
-- Data de Criação 
-- Data de Atualização 
-
-## Requisitos técnicos (para vaga de C#):
-- Utilizar a base de dados mysql;
-- Você pode utilizar o .NET Framework. Entranto, seria um diferencial construir a API com dotnet core 3.1.
-- Utilizar o Entity Framework para a camada de persistência;
-- Adotar as melhores práticas do mercado para construção de APIs;
-
-## Diferenciais:
-- Instalar e configurar o swagger;
-- Aplicar o padrão REST para o desenvolvimento da API;
-
-## O que será avaliado:
-- **Organização do código**: Como você organiza os arquivos que compõem a solução;
-- **Estruturação do código**: Como você estrutura o código e a solução do projeto (arquitetura adotada, etc);
-- **Criatividade/Inovação:** Capacidade de sugerir melhorias no contexto descrito no desafio;
-- **Nomenclatura/padrões:** A nomenclatura e padrões adotados para as propriedades, atributos, endpoints e nome do projeto;
-- **Utilização do Git:** O readme do repositório e a descrição dos commit deverão ser claros e de fácil entendimento;
-
-## Entrega:
-O candidato deverá criar um fork deste projeto, e a partir deste fork, realizar o desenvolvimento. Favor utilizar o "Readme" do seu fork para descrever as dificuldades técnicas encontradas, como você as superou e, principalmente, como subir o projeto. Ao finalizar, você deverá responder ao e-mail que te enviou esse desafio, com o link do seu fork.
+## O Projeto:
+O projeto foi criado a partir do donet core 3.1 com Entity Framework e PomeloFramework para fazer a persistência no banco de dados MySQL.
+O model Tarefa contém: Id, Título e Descrição e herda do Model Entity os seguintes conteúdos: Data de criação e Data de atualização.
+A visualização das tuplas de cada tarefa contém, para o usuário, apenas: Título, Descrição, Data de criação e Data de atualização. O conteúdo Id fica restrito ao responsável pela manipulação do banco de dados.
+## Inicialização do projeto:
+Para rodar o projeto localmente: 
+1) Não esquecer de configurar o servidor do banco de dados MySQL da sua máquina no arquivo "appsettings.json"
+2) Deletar pasta Migrations
+3) Comunicar com o banco de dados MySQL e criar as tabelas a partir do gerenciador de pacotes com o comando Add-Migration (nome da tabela) e, após, atualizar com o comando Update-Database
+4) Rodar a API
+OBS: Projeto feito rodando a IDE Visual Studio...
+## Principal dificuldade:
+Quando uma tarefa for criada ou atualizada é necessário guardar a data de criação e atualização. Quando criado apenas um model, esses dois conteúdos seriam manipulados pelo usuário não sendo feitos de forma automática.
+## Solução:
+Criar outro model de base para qualquer model da aplicação, nesse caso Entity que possuirá os seguintes conteúdos: dataCriar e dataUpdate que serão responsáveis reespectivamente pela data de criação e atualização.
+O TarefasController utiliza para o relacionamento com o banco de dados o metodo SaveChangesAsync(). Toda vez que é feita a criacao ou update no banco de dados esse método é obrigatoriamente chamado para o sucesso da persistência no banco de dados. 
+Podemos utilizar esse comportamento a fim de, no momento que for chamado, pausa-lo para a execuçãoao de um método que será responsavel por preencher o dataCriar e dataUpdate do Entity.
+## Considerações finais:
+Inicialmente houve certa dificuldade com relação a linguagem C#, visto que, como disse, havia conhecimento em desenvolvimento Back-End, principalmente, utilizando NodeJS e JavaScript. Naturalmente, devido ao uso mais constante de outro paradigma e sintaxe houve demora em relação a aplicação de lógia.
+A organização e arquitetura de projeto Web que levava do NodeJS me permitiu entender sem muitas dificuldades o dot net core e Entity Framework com apenas algumas consultas à documentação e boas práticas na internet.
+Como estou iniciando com essas tecnologias, meu primeiro contato impediu que, naturalmente, a aplicação ficasse ainda melhor devido ao desconhecimento de métodos e funcionalidades presentes nessa tecnologia mas acredito que entreguei um projeto sólido e responsivo de acordo com os requisitos do desafio.
