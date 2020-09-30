@@ -27,8 +27,10 @@ namespace WebAPI
         {
             services.AddControllersWithViews();
 
+            //Configurar o MySQL na aplicação...
             services.AddDbContext<WebAPIContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("WebAPIContext")));
+                    options.UseMySql(Configuration.GetConnectionString("WebAPIContext"), builder =>
+                    builder.MigrationsAssembly("WebAPI")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

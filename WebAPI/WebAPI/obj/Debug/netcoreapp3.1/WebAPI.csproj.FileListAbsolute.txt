@@ -164,8 +164,6 @@ C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CoreCompileInputs.cache
-C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\Razor\Views\Tarefas\Create.cshtml.g.cs
@@ -173,3 +171,8 @@ C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\Razor\Views\Tarefas\Details.cshtml.g.cs
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\Razor\Views\Tarefas\Edit.cshtml.g.cs
 C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\Razor\Views\Tarefas\Index.cshtml.g.cs
+C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\rodri\Desktop\desafio-backend-webapi\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
